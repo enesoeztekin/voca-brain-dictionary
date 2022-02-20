@@ -70,7 +70,7 @@ pronunciation.addEventListener("click", () => {
 backToHomepage.forEach((back) => {
   // I've used forEach because there are two HTML elements which has "back-to-home" class in the same page.
   back.addEventListener("click", () => {
-    document.location.href = "/";
+    document.location.href = "/index.html";
   });
 });
 
