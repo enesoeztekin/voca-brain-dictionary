@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$color-text: #565656;
+$color-primary: #00dbd3;
+$color-secondary: #feb075;
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: bold;
+  src: url("fonts/Gilroy-ExtraBold.otf");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 400;
+  src: url("fonts/Gilroy-Light.otf");
+}
+
+body {
+  font-family: "Gilroy";
+  background-image: url("img/doodle-backgrond.jpg");
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Homepage CSS Code */
+  .logo {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 1rem;
+  }
+  .search-bar {
+    display: block;
+    background-image: url("img/Search.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px bottom 4px;
+    border: none;
+    height: 50px;
+    padding: 1.5rem;
+    width: 600px;
+    background-color: white;
+    box-shadow: 0px 0px 15px rgba($color: #000000, $alpha: 0.16);
+    border-radius: 12px;
+    font-size: 1.25rem;
+    font-family: "Gilroy";
+    &:focus {
+      outline: 1px solid $color-secondary;
+    }
+    &::placeholder {
+      font-family: "Gilroy";
+    }
+  }
+  /* Homepage CSS Code */
+  /*----------------------------*/
+  /*Vocabulary Page CSS Code*/
+  .word-card {
+    background-color: white;
+    padding: 3rem 2rem;
+    box-shadow: 0px 0px 15px rgba($color: #000000, $alpha: 0.16);
+    border-radius: 30px;
+    .back-to-home {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      width: fit-content;
+      cursor: pointer;
+      p {
+        font-weight: bold;
+        color: #707070;
+      }
+      &:hover p {
+        border-bottom: 2px solid #707070;
+      }
+    }
+    .word {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $color-text;
+    }
+    .part-of-speech {
+      font-size: 1.25rem;
+      color: $color-secondary;
+      font-family: sans-serif;
+      font-style: italic;
+      font-weight: 800;
+    }
+    .pronunciation {
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      gap: 0.25rem;
+      margin: 0.75rem 0;
+    }
+    .short-seperator {
+      max-width: 100px;
+      border: 1px solid $color-secondary;
+    }
+    .definition {
+      margin: 0.5rem 0;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #8a8a8a;
+      max-width: 500px;
+    }
+    #example-icon {
+      color: $color-primary;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+    .example {
+      font-size: 1.1rem;
+      max-width: 500px;
+    }
+  }
+  .card-404 {
+    display: none;
+    background-color: white;
+    padding: 3rem 2rem;
+    box-shadow: 0px 0px 15px rgba($color: #000000, $alpha: 0.16);
+    border-radius: 30px;
+    .heading {
+      font-weight: 600;
+      font-size: 2rem;
+    }
+    .text {
+      font-size: 1.25rem;
+    }
+    .back-to-home {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      width: fit-content;
+      cursor: pointer;
+      p {
+        font-weight: bold;
+        color: #707070;
+      }
+      &:hover p {
+        border-bottom: 2px solid #707070;
+      }
+    }
+  }
+
+  /*Vocabulary Page CSS Code*/
+}
+
+@media (max-width: 644px) {
+  main {
+    padding: 0 1rem;
+  }
+  main .logo {
+    width: 400px;
+  }
+  main .search-bar {
+    width: 500px;
+  }
+}
+
+@media (max-width: 542px) {
+  main .logo {
+    width: 300px;
+  }
+  main .search-bar {
+    width: 400px;
+  }
+}
+
+@media (max-width: 435px) {
+  main .logo {
+    width: 250px;
+  }
+  main .search-bar {
+    width: 300px;
+    font-size: 1rem;
+  }
+}
